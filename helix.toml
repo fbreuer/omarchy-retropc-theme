@@ -1,0 +1,142 @@
+# RetroPC — amber phosphor theme adapted from the Omarchy RetroPC palette.
+
+"attribute" = { fg = "amber" }
+"comment" = { fg = "dim", modifiers = ["italic"] }
+"comment.block.documentation" = { fg = "muted", modifiers = ["italic"] }
+"constant" = { fg = "bright" }
+"constant.builtin" = { fg = "bright" }
+"constant.builtin.boolean" = { fg = "gold" }
+"constant.character" = { fg = "gold" }
+"constant.character.escape" = { fg = "bright" }
+"constant.numeric" = { fg = "orange" }
+"constructor" = { fg = "orange", modifiers = ["bold"] }
+"function" = { fg = "orange", modifiers = ["bold"] }
+"function.builtin" = { fg = "bright", modifiers = ["bold"] }
+"function.macro" = { fg = "magenta" }
+"function.method" = { fg = "orange" }
+"function.special" = { fg = "gold" }
+"keyword" = { fg = "red", modifiers = ["bold"] }
+"keyword.control" = { fg = "red", modifiers = ["bold"] }
+"keyword.control.conditional" = { fg = "red", modifiers = ["bold"] }
+"keyword.control.exception" = { fg = "red", modifiers = ["bold"] }
+"keyword.control.import" = { fg = "magenta", modifiers = ["bold"] }
+"keyword.control.repeat" = { fg = "red", modifiers = ["bold"] }
+"keyword.directive" = { fg = "magenta" }
+"keyword.function" = { fg = "red", modifiers = ["bold"] }
+"keyword.operator" = { fg = "red", modifiers = ["bold"] }
+"keyword.return" = { fg = "red", modifiers = ["bold"] }
+"keyword.storage" = { fg = "red" }
+"label" = { fg = "gold" }
+"namespace" = { fg = "ochre" }
+"operator" = { fg = "bright" }
+"punctuation" = { fg = "ochre" }
+"punctuation.bracket" = { fg = "gold" }
+"punctuation.delimiter" = { fg = "ochre" }
+"special" = { fg = "magenta" }
+"string" = { fg = "amber-light" }
+"string.regexp" = { fg = "magenta" }
+"string.special" = { fg = "orange" }
+"string.special.path" = { fg = "amber-light", modifiers = ["underlined"] }
+"string.special.symbol" = { fg = "bright" }
+"tag" = { fg = "red", modifiers = ["bold"] }
+"type" = { fg = "ochre" }
+"type.builtin" = { fg = "gold" }
+"type.enum.variant" = { fg = "gold" }
+"variable" = { fg = "amber" }
+"variable.builtin" = { fg = "bright" }
+"variable.other.member" = { fg = "amber" }
+"variable.parameter" = { fg = "amber-light", modifiers = ["italic"] }
+
+"markup.bold" = { fg = "bright", modifiers = ["bold"] }
+"markup.heading" = { fg = "bright", modifiers = ["bold"] }
+"markup.heading.marker" = { fg = "red", modifiers = ["bold"] }
+"markup.italic" = { fg = "amber-light", modifiers = ["italic"] }
+"markup.link.label" = { fg = "gold" }
+"markup.link.text" = { fg = "bright" }
+"markup.link.url" = { fg = "ochre", modifiers = ["underlined"] }
+"markup.list" = { fg = "red" }
+"markup.normal" = { fg = "amber" }
+"markup.quote" = { fg = "muted", modifiers = ["italic"] }
+"markup.raw" = { fg = "amber-light" }
+"markup.raw.block" = { fg = "amber-light" }
+"markup.raw.inline" = { fg = "amber-light" }
+"markup.strikethrough" = { fg = "muted", modifiers = ["crossed_out"] }
+
+"diff.plus" = { fg = "ochre" }
+"diff.plus.gutter" = { fg = "gold" }
+"diff.delta" = { fg = "bright" }
+"diff.delta.gutter" = { fg = "bright" }
+"diff.minus" = { fg = "deep-orange" }
+"diff.minus.gutter" = { fg = "red" }
+
+"diagnostic.hint" = { underline = { color = "magenta", style = "curl" } }
+"diagnostic.info" = { underline = { color = "amber-light", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "red", style = "curl" } }
+"diagnostic.error" = { underline = { color = "deep-orange", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+"hint" = { fg = "magenta", modifiers = ["bold"] }
+"info" = { fg = "amber-light", modifiers = ["bold"] }
+"warning" = { fg = "red", modifiers = ["bold"] }
+"error" = { fg = "deep-orange", modifiers = ["bold"] }
+
+"ui.background" = { fg = "amber", bg = "background" }
+"ui.background.separator" = { fg = "border" }
+"ui.cursor" = { fg = "background", bg = "bright" }
+"ui.cursor.primary" = { fg = "background", bg = "bright" }
+"ui.cursor.insert" = { fg = "background", bg = "orange" }
+"ui.cursor.select" = { fg = "background", bg = "magenta" }
+"ui.cursor.match" = { fg = "bright", bg = "selection", modifiers = ["bold"] }
+"ui.cursorline.primary" = { bg = "surface" }
+"ui.cursorcolumn.primary" = { bg = "surface" }
+"ui.gutter" = { fg = "dim", bg = "background" }
+"ui.gutter.selected" = { fg = "bright", bg = "surface" }
+"ui.linenr" = { fg = "dim" }
+"ui.linenr.selected" = { fg = "bright", modifiers = ["bold"] }
+"ui.selection" = { bg = "selection" }
+"ui.selection.primary" = { bg = "selection-primary" }
+"ui.highlight" = { bg = "selection" }
+"ui.highlight.frameline" = { bg = "border" }
+"ui.statusline" = { fg = "amber", bg = "surface" }
+"ui.statusline.inactive" = { fg = "muted", bg = "background" }
+"ui.statusline.normal" = { fg = "background", bg = "amber-light", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "background", bg = "red", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "background", bg = "magenta", modifiers = ["bold"] }
+"ui.statusline.separator" = { fg = "border" }
+"ui.text" = { fg = "amber" }
+"ui.text.focus" = { fg = "bright", bg = "selection", modifiers = ["bold"] }
+"ui.text.inactive" = { fg = "dim" }
+"ui.text.directory" = { fg = "ochre" }
+"ui.help" = { fg = "amber", bg = "surface" }
+"ui.popup" = { fg = "amber", bg = "surface" }
+"ui.popup.info" = { fg = "amber", bg = "surface" }
+"ui.window" = { fg = "border" }
+"ui.menu" = { fg = "amber", bg = "surface" }
+"ui.menu.selected" = { fg = "bright", bg = "selection", modifiers = ["bold"] }
+"ui.menu.scroll" = { fg = "bright", bg = "border" }
+"ui.virtual" = { fg = "dim" }
+"ui.virtual.indent-guide" = { fg = "border" }
+"ui.virtual.whitespace" = { fg = "border" }
+"ui.virtual.ruler" = { bg = "surface" }
+"ui.virtual.inlay-hint" = { fg = "muted", bg = "surface" }
+"ui.virtual.jump-label" = { fg = "bright", modifiers = ["bold", "underlined"] }
+"ui.debug.breakpoint" = { fg = "red" }
+"ui.debug.active" = { fg = "bright" }
+
+[palette]
+background = "#0A0A08"
+surface = "#1A1612"
+selection = "#2A1F00"
+selection-primary = "#4A3300"
+border = "#805500"
+dim = "#805500"
+muted = "#996600"
+ochre = "#CC9900"
+amber = "#FFB000"
+amber-light = "#FFAA00"
+orange = "#FFBB00"
+gold = "#D4AA00"
+bright = "#FFCC00"
+red = "#FF8800"
+deep-orange = "#FF6600"
+magenta = "#FF9900"

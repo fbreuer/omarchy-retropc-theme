@@ -1,0 +1,47 @@
+#!/bin/bash
+
+set -euo pipefail
+
+theme_name=${1:-}
+gtk_config_dir="$HOME/.config/gtk-4.0"
+gtk_override="$gtk_config_dir/gtk.css"
+gtk_backup="$gtk_config_dir/gtk.css.before-retropc"
+theme_css="$HOME/.local/share/themes/RetroPC/gtk-4.0/gtk.css"
+managed_marker="Managed by the RetroPC Omarchy theme"
+
+enable_retropc() {
+  mkdir -p "$gtk_config_dir"
+
+  # Preserve an unrelated user override, but do not back up an older version
+  # of our own RetroPC import.
+  if [[ -e $gtk_override ]] && \
+     ! grep -Fq "$managed_marker" "$gtk_override" && \
+     ! grep -Fq "/RetroPC/gtk-4.0/gtk.css" "$gtk_override" && \
+     [[ ! -e $gtk_backup ]]; then
+    cp -a "$gtk_override" "$gtk_backup"
+  fi
+
+  printf '%s\n%s\n' \
+    "/* $managed_marker. */" \
+    "@import url(\"$theme_css\");" >"$gtk_override"
+
+  gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+  gsettings set org.gnome.desktop.interface gtk-theme "RetroPC"
+  gsettings set org.gnome.desktop.interface icon-theme "Yaru-yellow-dark"
+}
+
+disable_retropc() {
+  if [[ -f $gtk_override ]] && grep -Fq "$managed_marker" "$gtk_override"; then
+    if [[ -e $gtk_backup ]]; then
+      mv "$gtk_backup" "$gtk_override"
+    else
+      rm -f "$gtk_override"
+    fi
+  fi
+}
+
+if [[ $theme_name == "retropc" ]]; then
+  enable_retropc
+else
+  disable_retropc
+fi

@@ -1,0 +1,63 @@
+/* RetroPC — GTK 4 uses the shared GTK theme rules. */
+@import url("../gtk-3.0/gtk.css");
+
+/* libadwaita applications, including Nautilus, consume these semantic names. */
+@define-color window_bg_color #0A0A08;
+@define-color window_fg_color #FFB000;
+@define-color view_bg_color #0A0A08;
+@define-color view_fg_color #FFB000;
+@define-color headerbar_bg_color #1A1612;
+@define-color headerbar_fg_color #FFCC00;
+@define-color headerbar_border_color #805500;
+@define-color sidebar_bg_color #1A1612;
+@define-color sidebar_fg_color #FFB000;
+@define-color secondary_sidebar_bg_color #1A1612;
+@define-color secondary_sidebar_fg_color #FFB000;
+@define-color card_bg_color #1A1612;
+@define-color card_fg_color #FFB000;
+@define-color popover_bg_color #1A1612;
+@define-color popover_fg_color #FFB000;
+@define-color dialog_bg_color #0A0A08;
+@define-color dialog_fg_color #FFB000;
+@define-color accent_color #FFAA00;
+@define-color accent_bg_color #FFAA00;
+@define-color accent_fg_color #0A0A08;
+@define-color destructive_color #FF8800;
+@define-color destructive_bg_color #2A1F00;
+@define-color destructive_fg_color #FF8800;
+@define-color borders #805500;
+@define-color shade_color alpha(#000000, 0.72);
+
+windowhandle,
+windowcontrols,
+.navigation-sidebar,
+.content,
+.boxed-list,
+preferencespage,
+preferencesgroup {
+  background-color: @background;
+  color: @foreground;
+}
+
+.card,
+.boxed-list {
+  border: 1px solid @border;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.suggested-action {
+  background-color: @accent;
+  border-color: @bright;
+  color: @background;
+}
+
+.destructive-action {
+  background-color: @selection;
+  border-color: @warning;
+  color: @warning;
+}
+
+.accent {
+  color: @accent;
+}

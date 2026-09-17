@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=RetroPC
+Comment=Amber phosphor GTK theme for Omarchy RetroPC
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=RetroPC
+MetacityTheme=RetroPC
+IconTheme=Yaru-blue
+CursorTheme=Adwaita
+ButtonLayout=menu:minimize,maximize,close
+ColorScheme=dark
