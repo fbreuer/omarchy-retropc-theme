@@ -1,0 +1,14 @@
+# Match the menu and legacy Walker selection treatment.
+[launcher]
+background = "#0A0A08"
+background-alpha = 1.0
+text = "#FFB000"
+border = "#CC9900"
+border-alpha = 0.533333
+scrim = "#0A0A08"
+scrim-alpha = 0.5
+selected-background = "#FFCC00"
+selected-background-alpha = 1.0
+selected-text = "#0A0A08"
+selected-border = "#CC9900"
+selected-border-alpha = 1.0

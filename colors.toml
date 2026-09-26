@@ -1,0 +1,37 @@
+# Omarchy 4 semantic palette. Existing app-specific palettes remain unchanged.
+mode = "dark"
+
+accent = "#CC9900"
+selection = "#2A1F00"
+muted = "#805500"
+
+background = "#0A0A08"
+# Deeper shades for generated editor and panel surfaces.
+dark_background = "#080806"
+darker_background = "#050504"
+lighter_background = "#1A1612"
+
+foreground = "#FFB000"
+dark_foreground = "#996600"
+light_foreground = "#FFBB00"
+bright_foreground = "#FFCC00"
+
+# Semantic names retain RetroPC's amber-only interpretation of ANSI colors.
+red = "#FF8800"
+yellow = "#FFD700"
+orange = "#FFBB00"
+green = "#FFCC00"
+cyan = "#CC9900"
+blue = "#CC9900"
+magenta = "#FF9900"
+brown = "#996600"
+
+bright_red = "#FFAA00"
+bright_yellow = "#FFDD00"
+bright_green = "#FFCC00"
+bright_cyan = "#FFB000"
+bright_blue = "#FFBB00"
+bright_magenta = "#FFAA00"
+
+# Matches the legacy hyprland.conf without requiring a theme-supplied Lua file.
+hyprland_active_border = "#CC9900"

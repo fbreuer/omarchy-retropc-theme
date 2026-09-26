@@ -1,0 +1,13 @@
+# Translate the legacy Hyprlock input colors to the shell lock surface.
+[lock]
+background = "#996600"
+background-alpha = 0.3
+text = "#FFB000"
+placeholder = "#996600"
+text-error = "#FF8800"
+border = "rgba(255,176,0,0.5)"
+border-active = "#FFCC00"
+border-error = "#FF8800"
+border-alpha = 1.0
+selection = "#FFCC00"
+selection-alpha = 0.45

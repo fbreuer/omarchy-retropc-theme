@@ -26,10 +26,13 @@ omarchy-theme-install https://github.com/rondilley/omarchy-retropc-theme
 
 This theme includes configurations for:
 
+- Omarchy 4 semantic palette (colors.toml)
+- Omarchy 4 shell bar, menu, launcher, notifications, and lock screen (shell.*.toml)
 - Alacritty (alacritty.toml)
 - btop (btop.theme)
 - Hyprland (hyprland.conf, hyprlock.conf)
 - Mako (mako.ini)
+- Midnight Commander (mc.ini)
 - Neovim (neovim.lua)
 - Doom Emacs (retropc-theme.el)
 - GTK 3 and GTK 4 (gtk-3.0/, gtk-4.0/, index.theme)
@@ -41,8 +44,35 @@ This theme includes configurations for:
 - Wofi (wofi.css)
 - Walker (walker.css)
 - SwayOSD (swayosd.css)
-- Desktop Background (backgrounds/amber_tube.jpg)
+- Desktop backgrounds: amber tube, gold logo, and gold wordmark (backgrounds/)
 - Font (fonts/Bm437_IBM_XGA-AI_12x23.otb)
+
+## Omarchy 4 Support
+
+`colors.toml` provides the semantic amber palette used to generate Omarchy 4
+application themes. The `shell.*.toml` files carry the existing desktop surface
+colors into the new shell while other sections use Omarchy's generated defaults.
+The legacy application configurations and their custom font settings are retained.
+Preview screenshots for the Omarchy 4 theme picker are not included.
+
+Current Omarchy filters terminal configurations and Lua files from themes
+installed through Git and regenerates them from the palette. This means the
+bundled Alacritty/Ghostty font settings and custom Neovim configuration are not
+automatically used through that installation route. Configure fonts separately
+in your user terminal configuration if using it. Merely updating this repository
+does not apply the theme or modify your active configuration.
+
+The original Waybar, Walker, Mako, SwayOSD, and Hyprlock files remain available
+for older installations. Omarchy 4 uses its shell in place of those components;
+the shell overrides port appearance, not application-specific notification rules
+or font configuration.
+
+## Gold Wallpapers
+
+The two 4K gold wallpapers are by Erik Johansson, from
+[Neon Glow](https://github.com/ejuro/omarchy-neon-glow-theme), under the
+[MIT license](backgrounds/NEON-GLOW-LICENSE.txt). These images use Git LFS;
+run `git lfs install` before cloning, or `git lfs pull` in an existing clone.
 
 ## Editor Themes
 
@@ -79,6 +109,35 @@ Then select `RetroPC` in Zed's theme picker or set it in
   }
 }
 ```
+
+## Midnight Commander
+
+`mc.ini` follows the Zed theme's near-black panels, warm raised surfaces,
+amber text, subtle brown selections, and orange errors. It covers file panels,
+dialogs, menus, help, and the built-in editor, viewer, and diff viewer. Marked
+files use brighter, bold amber so they remain distinct from the cursor row.
+Editor syntax highlighting is controlled separately by MC's syntax files.
+
+Requires a true-color terminal and an MC build with S-Lang true-color support
+(MC 4.8.19+ and S-Lang 2.3.1+ on 64-bit systems). Run these commands from this
+repository; no Omarchy hook is installed:
+
+```bash
+# Preview without installing the skin.
+COLORTERM=truecolor mc --skin="$(pwd)/mc.ini"
+
+# Install for your user.
+mkdir -p ~/.local/share/mc/skins
+cp mc.ini ~/.local/share/mc/skins/retropc.ini
+mc --skin=retropc
+```
+
+Select `RetroPC — amber phosphor` in **Options → Appearance**, then use
+**Options → Save setup** to keep it. Alternatively, with MC closed, set
+`skin=retropc` in the existing `[Midnight-Commander]` section of
+`~/.config/mc/ini`. If MC reports no true-color support, check `mc --version`,
+ensure `COLORTERM` is `truecolor` or `24bit`, and use a terminal whose `TERM`
+entry supports 256 colors (such as `xterm-256color`).
 
 ## Palette Reference
 

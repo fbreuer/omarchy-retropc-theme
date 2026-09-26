@@ -1,0 +1,9 @@
+# Port the legacy Waybar surface colors; retain Omarchy's default sizing.
+[bar]
+background = "#1A1612"
+background-alpha = 1.0
+text = "#FFB000"
+active = "#FF8800"
+scale-with-font = true
+size-horizontal = 26
+size-vertical = 28
