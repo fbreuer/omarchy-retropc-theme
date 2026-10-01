@@ -124,7 +124,7 @@
 "ui.debug.active" = { fg = "bright" }
 
 [palette]
-background = "#0A0A08"
+background = "#000000"
 surface = "#1A1612"
 selection = "#2A1F00"
 selection-primary = "#4A3300"

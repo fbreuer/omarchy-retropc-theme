@@ -5,10 +5,10 @@ accent = "#CC9900"
 selection = "#2A1F00"
 muted = "#805500"
 
-background = "#0A0A08"
-# Deeper shades for generated editor and panel surfaces.
-dark_background = "#080806"
-darker_background = "#050504"
+# Base and deeper surfaces share hard black across handwritten/generated themes.
+background = "#000000"
+dark_background = "#000000"
+darker_background = "#000000"
 lighter_background = "#1A1612"
 
 foreground = "#FFB000"

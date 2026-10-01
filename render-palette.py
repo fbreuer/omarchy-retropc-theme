@@ -7,7 +7,7 @@ import cairo
 
 
 PALETTE = (
-    ("PHOSPHOR BLACK", "#0A0A08"),
+    ("PHOSPHOR BLACK", "#000000"),
     ("WARM BLACK", "#1A1612"),
     ("DARK AMBER", "#2A1F00"),
     ("BURNT OCHRE", "#805500"),
@@ -36,7 +36,7 @@ def rgb(hex_color):
 def text_color(hex_color):
     red, green, blue = rgb(hex_color)
     luminance = 0.2126 * red + 0.7152 * green + 0.0722 * blue
-    return rgb("#0A0A08" if luminance > 0.48 else "#FFCC00")
+    return rgb("#000000" if luminance > 0.48 else "#FFCC00")
 
 
 def set_font(context, size, weight=cairo.FONT_WEIGHT_NORMAL):
@@ -57,7 +57,7 @@ def render(output, width=1920, height=1200):
     surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
     context = cairo.Context(surface)
 
-    context.set_source_rgb(*rgb("#0A0A08"))
+    context.set_source_rgb(*rgb("#000000"))
     context.paint()
 
     margin = 92

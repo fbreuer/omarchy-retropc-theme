@@ -15,7 +15,7 @@ return {
 
     local retropc_palette = {
       -- Base "RetroPC" Palette Overrides
-      bg0 = "#0A0A08", bg1 = "#0A0A08", bg2 = "#1A1612", bg3 = "#2A1F00", bg4 = "#2A1F00",
+      bg0 = "#000000", bg1 = "#000000", bg2 = "#1A1612", bg3 = "#2A1F00", bg4 = "#2A1F00",
       fg0 = "#FFCC00", fg1 = "#FFB000", fg2 = "#CC9900", fg3 = "#996600",
       sel0 = "#2A1F00",
       sel1 = c.from_hex("#2A1F00"):blend(c.from_hex("#FFCC00"), 0.2):to_css(),
@@ -36,7 +36,8 @@ return {
       lualine_insert_bg = "#FF8800",
       lualine_visual_bg = "#FF9900",
       lualine_command_bg = "#FFBB00",
-      lualine_inactive_bg = c.from_hex("#0A0A08"):lighten(5):to_css(),
+      -- Raised surface stays independent of the pure-black base.
+      lualine_inactive_bg = "#181813",
 
       -- Treesitter Palette Extensions
       ts_parameter = "#FFAA00",

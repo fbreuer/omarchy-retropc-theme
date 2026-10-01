@@ -67,6 +67,32 @@ for older installations. Omarchy 4 uses its shell in place of those components;
 the shell overrides port appearance, not application-specific notification rules
 or font configuration.
 
+## Background Color Contract
+
+Base surfaces are hard black `#000000` across the pack. The semantic
+`background`, `dark_background`, and `darker_background` slots all use black,
+so generated Omarchy application themes, Quickshell, and Hyprland share it with
+handwritten terminal/editor/GTK themes. Inverse text using that base is black
+as well; alpha values, handwritten amber ANSI colors, explicit raised surfaces,
+selections, borders, and wallpaper pixels remain unchanged. Generated ANSI
+color 0 and calculated mixed tints follow the new black base. Neovim's raised lualine surface stays
+`#181813`, independent of the base.
+
+After changing source, regenerate the palette chart and check all consumers:
+
+```bash
+python3 render-palette.py
+python3 -B -m unittest discover -s tests
+# Reapply without cycling the selected wallpaper:
+OMARCHY_THEME_SKIP_BACKGROUND=1 omarchy theme set retropc
+```
+
+Reinstall the manual Doom, Zed, and Midnight Commander theme copies described
+below. If Helix selects a manually installed `retropc` theme rather than
+Omarchy's managed theme, refresh that copy as well. Already-open applications
+may require their normal theme reload or a later restart. `theme.png` remains
+a historical screenshot, not an automatically regenerated preview.
+
 ## Gold Wallpapers
 
 The two 4K gold wallpapers are by Erik Johansson, from
@@ -112,7 +138,7 @@ Then select `RetroPC` in Zed's theme picker or set it in
 
 ## Midnight Commander
 
-`mc.ini` follows the Zed theme's near-black panels, warm raised surfaces,
+`mc.ini` follows the Zed theme's black panels, warm raised surfaces,
 amber text, subtle brown selections, and orange errors. It covers file panels,
 dialogs, menus, help, and the built-in editor, viewer, and diff viewer. Marked
 files use brighter, bold amber so they remain distinct from the cursor row.
@@ -143,8 +169,8 @@ entry supports 256 colors (such as `xterm-256color`).
 
 ![RetroPC color palette](retropc-palette.png)
 
-The chart contains the 18 canonical colors defined by the original Alacritty
-and Neovim configurations. Regenerate it with Cairo and Berkeley Mono:
+The chart contains the 18 canonical colors defined by the Alacritty and Neovim
+configurations, including the hard-black base. Regenerate it with Cairo and Berkeley Mono:
 
 ```bash
 python3 render-palette.py

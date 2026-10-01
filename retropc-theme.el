@@ -19,8 +19,8 @@
 
 (let* ((class '((class color) (min-colors 89)))
        ;; Original RetroPC palette, adapted from neovim.lua.
-       (bg0     "#0A0A08")
-       (bg1     "#0A0A08")
+       (bg0     "#000000")
+       (bg1     "#000000")
        (bg2     "#1A1612")
        (bg3     "#2A1F00")
        (bg4     "#2A1F00")

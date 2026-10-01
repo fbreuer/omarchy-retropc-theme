@@ -17,16 +17,16 @@ size = 12
 
 [colors]
 [colors.primary]
-background = "#0A0A08"
+background = "#000000"
 foreground = "#FFB000"
 dim_foreground = "#996600"
 
 [colors.cursor]
-text = "#0A0A08"
+text = "#000000"
 cursor = "#FFCC00"
 
 [colors.vi_mode_cursor]
-text = "#0A0A08"
+text = "#000000"
 cursor = "#FFCC00"
 
 [colors.selection]
