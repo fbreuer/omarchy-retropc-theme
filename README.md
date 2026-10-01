@@ -30,7 +30,7 @@ This theme includes configurations for:
 - Omarchy 4 shell bar, menu, launcher, notifications, and lock screen (shell.*.toml)
 - Alacritty (alacritty.toml)
 - btop (btop.theme)
-- Hyprland (hyprland.conf, hyprlock.conf)
+- Hyprland (hyprland.lua for Omarchy 4, legacy hyprland.conf/hyprlock.conf)
 - Mako (mako.ini)
 - Midnight Commander (mc.ini)
 - Neovim (neovim.lua)
@@ -92,6 +92,28 @@ below. If Helix selects a manually installed `retropc` theme rather than
 Omarchy's managed theme, refresh that copy as well. Already-open applications
 may require their normal theme reload or a later restart. `theme.png` remains
 a historical screenshot, not an automatically regenerated preview.
+
+## Window Opacity (Omarchy 4)
+
+`hyprland.lua` loads after Omarchy's default window rules. Application windows
+are fully opaque when active, inactive, or fullscreen: the rule sets all three
+opacity values to `1 override`, marks windows opaque, and ignores client alpha
+with `force_rgbx`. Existing border colors are retained.
+
+Quickshell's `org.quickshell` windows are excluded, and no layer rules or shell
+alpha settings are changed. Quickshell bars, menus, popouts and lock surfaces
+retain their existing transparency.
+
+Use the reviewed user-owned theme directory/symlink route to retain this Lua
+file. Omarchy filters Lua from Git-installed themes; that route does not apply
+this custom window policy. Reapplying RetroPC and reloading Hyprland applies
+it to existing windows without closing applications.
+
+```bash
+OMARCHY_THEME_SKIP_BACKGROUND=1 omarchy theme set retropc
+hyprctl reload
+hyprctl configerrors
+```
 
 ## Gold Wallpapers
 
